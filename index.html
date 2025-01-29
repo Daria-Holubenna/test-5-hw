@@ -50,7 +50,9 @@
       <section class="main-theme section">
         <div class="container order">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
-          <button class="main-submit" type="button">Order Service</button>
+          <button class="main-submit" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="section-about-company section">
@@ -435,8 +437,12 @@
         <div class="subscribe-wripper">
           <p class="title-footer">Subscribe</p>
           <form class="subscribe">
-            <label class="label-sbscr">
-              <input class="input-footer" type="email" placeholder="E-mail"
+            <label class="label-sbscr" for="email-footer">
+              <input
+                class="input-footer"
+                type="email"
+                placeholder="E-mail"
+                name="email-footer"
             /></label>
             <button class="submit-footer" type="submit">
               Subscribe
@@ -449,11 +455,11 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button class="close-btn" type="button">
-          <span>
-            <svg width="8" height="8">
+        <button class="close-btn" type="button" data-modal-close>
+          <span class="position-icon">
+            <svg class="icon-close" width="8" height="8">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </span>
@@ -542,5 +548,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
